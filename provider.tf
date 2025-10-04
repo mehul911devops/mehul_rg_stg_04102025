@@ -5,6 +5,7 @@ terraform {
         version = "4.46.0"
     }
   }
+
   backend "azurerm" {
     resource_group_name = "myrg3"
     storage_account_name = "mtstg3"
@@ -12,4 +13,10 @@ terraform {
     key = "terraform.tfstate"
     
   }
+}
+
+provider "azurerm" {
+    features {}
+    subscription_id = "1a747295-ba1d-4caf-b64b-855098eb49d6"
+  
 }
